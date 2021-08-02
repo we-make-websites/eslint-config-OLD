@@ -1,14 +1,16 @@
 {
   "name": "@we-make-websites/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "We Make Website's eslint rules and config",
   "repository": "https://github.com/we-make-websites/eslint-config",
   "author": "Craig Baldwin <craig@wemakewebsites.com>",
   "license": "MIT",
   "main": "index.js",
-  "devDependencies": {
-    "eslint": "^7.31.0",
+  "dependencies": {
     "eslint-plugin-vue": "^7.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0"
   },
   "peerDependencies": {
     "eslint": "^7.31.0"
