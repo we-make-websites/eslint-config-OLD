@@ -29,6 +29,7 @@ module.exports = {
     'lines-around-comment': ['error', { ignorePattern: 'webpack' }],
     'no-process-env': 'off',
     'semi': ['error', 'never'],
+    'vue/no-multiple-template-root': 'off',
     'vue/no-v-html': 'off',
   },
 }
