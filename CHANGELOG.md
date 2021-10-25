@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.3 - 2021-10-25
+* Fixed issue with Vue eslint not running
+
 ## 2.0.2 - 2021-10-25
 * Removed unsupported rules
 * Updated dependencies
