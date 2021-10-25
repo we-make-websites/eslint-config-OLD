@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2 - 2021-10-25
+* Removed unsupported rules
+* Updated dependencies
+
 ## 2.0.1 - 2021-10-25
 * Removed unused plugin
 

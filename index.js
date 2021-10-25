@@ -3,10 +3,23 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ['plugin:vue/vue3-recommended'],
-  parserOptions: {
-    parser: 'babel-eslint'
+  extends: [
+    'plugin:vue/vue3-recommended'
+  ],
+  globals: {
+    geoip2: true,
+    IntersectionObserver: true,
+    Intl: true,
+    Shopify: true,
+    URLSearchParams: true,
   },
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+  },
+  plugins: [
+    '@babel',
+  ],
   root: true,
   rules: {
     'array-bracket-newline': ['error', {
@@ -17,14 +30,13 @@ module.exports = {
       minItems: 2,
       multiline: true
     }],
-    'babel/camelcase': 'off',
-    'babel/object-curly-spacing': ['error', 'always'],
-    'babel/semi': ['error', 'never'],
+    'camelcase': 'off',
     'id-length': 'off',
     'import/no-anonymous-default-export': 'off',
     'import/order': 'off',
     'lines-around-comment': ['error', { ignorePattern: 'webpack' }],
     'no-process-env': 'off',
+    'object-curly-spacing': ['error', 'always'],
     'semi': ['error', 'never'],
     'vue/no-multiple-template-root': 'off',
     'vue/no-v-html': 'off',
