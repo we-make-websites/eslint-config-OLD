@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: [
-    'plugin:@shopify/esnext',
-    'plugin:vue/vue3-recommended',
-  ],
+  extends: ['plugin:vue/vue3-recommended'],
   parserOptions: {
     parser: 'babel-eslint'
   },

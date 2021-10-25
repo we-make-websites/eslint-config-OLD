@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1 - 2021-10-25
+* Removed unused plugin
+
+## 2.0.0 - 2021-10-25
+* Updated dependencies
+
 ## 1.0.2 - 2021-08-02
 * Fix missing dependency
 
