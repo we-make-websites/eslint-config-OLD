@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.1 - 2021-11-02
+* Fixed incorrectly applied trailing comma rule
+
 ## 2.1.0 - 2021-11-02
 * Increased minimum number of items required in array before erroring
 * Fixed trailing comma rule no longer being applied

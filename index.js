@@ -31,7 +31,7 @@ module.exports = {
       multiline: true
     }],
     'camelcase': 'off',
-    'comma-dangle': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
     'id-length': 'off',
     'import/no-anonymous-default-export': 'off',
     'import/order': 'off',
