@@ -26,10 +26,7 @@ module.exports = {
       minItems: 3,
       multiline: true
     }],
-    'array-element-newline': ['error', {
-      minItems: 3,
-      multiline: true
-    }],
+    'array-element-newline': ['error', 'consistent'],
     'camelcase': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'id-length': 'off',

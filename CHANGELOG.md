@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.2 - 2021-11-02
+* Update array newline rule consistent instead of always when over three items
+
 ## 2.1.1 - 2021-11-02
 * Fixed incorrectly applied trailing comma rule
 
