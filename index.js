@@ -23,14 +23,15 @@ module.exports = {
   root: true,
   rules: {
     'array-bracket-newline': ['error', {
-      minItems: 2,
+      minItems: 3,
       multiline: true
     }],
     'array-element-newline': ['error', {
-      minItems: 2,
+      minItems: 3,
       multiline: true
     }],
     'camelcase': 'off',
+    'comma-dangle': ['error', 'always'],
     'id-length': 'off',
     'import/no-anonymous-default-export': 'off',
     'import/order': 'off',

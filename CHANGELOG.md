@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0 - 2021-11-02
+* Increased minimum number of items required in array before erroring
+* Fixed trailing comma rule no longer being applied
+
 ## 2.0.3 - 2021-10-25
 * Fixed issue with Vue eslint not running
 
