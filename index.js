@@ -19,12 +19,13 @@ module.exports = {
   },
   plugins: [
     '@babel',
+    'unused-imports',
   ],
   root: true,
   rules: {
     'array-bracket-newline': ['error', {
       minItems: 3,
-      multiline: true
+      multiline: true,
     }],
     'array-element-newline': ['error', 'consistent'],
     'camelcase': 'off',
@@ -34,8 +35,16 @@ module.exports = {
     'import/order': 'off',
     'lines-around-comment': ['error', { ignorePattern: 'webpack' }],
     'no-process-env': 'off',
+    'no-unused-vars': 'off',
     'object-curly-spacing': ['error', 'always'],
     'semi': ['error', 'never'],
+    'unused-imports/no-unused-imports': 'error',
+		'unused-imports/no-unused-vars': ['warn', {
+      'vars': 'all',
+      'varsIgnorePattern': '^_',
+      'args': 'after-used',
+      'argsIgnorePattern': '^_'
+    }],
     'vue/no-multiple-template-root': 'off',
     'vue/no-v-html': 'off',
   },

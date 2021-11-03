@@ -1,6 +1,6 @@
 {
   "name": "@we-make-websites/eslint-config",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "We Make Website's eslint rules and config",
   "repository": "https://github.com/we-make-websites/eslint-config",
   "author": "Craig Baldwin <craig@wemakewebsites.com>",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.15.8",
     "@babel/eslint-plugin": "^7.14.5",
+    "eslint-plugin-unused-imports": "^1.1.5",
     "eslint-plugin-vue": "^7.20.0"
   },
   "peerDependencies": {
