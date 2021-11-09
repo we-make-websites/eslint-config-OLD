@@ -35,6 +35,7 @@ module.exports = {
     'import/order': 'off',
     'lines-around-comment': ['error', { ignorePattern: 'webpack' }],
     'no-process-env': 'off',
+    'no-undef': 'error',
     'no-unused-vars': 'off',
     'object-curly-spacing': ['error', 'always'],
     'semi': ['error', 'never'],

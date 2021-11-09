@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.3.0 - 2021-11-09
+* Added no undeclared variables rule
+
 ## 2.2.0 - 2021-11-03
 * Added no unused variables rule
 * Added no unused import plugin and rule
