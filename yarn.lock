@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/eslint-parser@^7.15.8":
+"@babel/eslint-parser@7.16.5":
   version "7.16.5"
   resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.16.5.tgz#48d3485091d6e36915358e4c0d0b2ebe6da90462"
   integrity sha512-mUqYa46lgWqHKQ33Q6LNCGp/wPR3eqOYTUixHFsfrSQqRxH0+WOzca75iEjFr5RDGH1dDz622LaHhLOzOuQRUA==
@@ -11,7 +11,7 @@
     eslint-visitor-keys "^2.1.0"
     semver "^6.3.0"
 
-"@babel/eslint-plugin@^7.14.5":
+"@babel/eslint-plugin@7.16.5":
   version "7.16.5"
   resolved "https://registry.yarnpkg.com/@babel/eslint-plugin/-/eslint-plugin-7.16.5.tgz#d1770685160922059f5d8f101055e799b7cff391"
   integrity sha512-R1p6RMyU1Xl1U/NNr+D4+HjkQzN5dQOX0MpjW9WLWhHDjhzN9gso96MxxOFvPh0fKF/mMH8TGW2kuqQ2eK2s9A==
@@ -160,14 +160,14 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-plugin-unused-imports@^2.0.0:
+eslint-plugin-unused-imports@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-unused-imports/-/eslint-plugin-unused-imports-2.0.0.tgz#d8db8c4d0cfa0637a8b51ce3fd7d1b6bc3f08520"
   integrity sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A==
   dependencies:
     eslint-rule-composer "^0.3.0"
 
-eslint-plugin-vue@^8.3.0:
+eslint-plugin-vue@8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-8.3.0.tgz#2ae4f915ed3541a58c4a4c1145c1e60b86aa7e85"
   integrity sha512-IIuLHw4vQxGlHcoP2dG6t/2OVdQf2qoyAzEGAxreU1afZOHGA7y3TWq8I+r3ZA6Wjs6xpeUWGHlT31QGr9Rb5g==
@@ -215,7 +215,7 @@ eslint-visitor-keys@^3.1.0, eslint-visitor-keys@^3.2.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.2.0.tgz#6fbb166a6798ee5991358bc2daa1ba76cc1254a1"
   integrity sha512-IOzT0X126zn7ALX0dwFiUQEdsfzrm4+ISsQS8nukaJXwEyYKRSnEIIDULYg1mCtGp7UUXgfGl7BIolXREQK+XQ==
 
-eslint@^8.1.0:
+eslint@8.7.0:
   version "8.7.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.7.0.tgz#22e036842ee5b7cf87b03fe237731675b4d3633c"
   integrity sha512-ifHYzkBGrzS2iDU7KjhCAVMGCvF6M3Xfs8X8b37cgrUlDt6bWRTpRh6T/gtSXv1HJ/BUGgmjvNvOEGu85Iif7w==
