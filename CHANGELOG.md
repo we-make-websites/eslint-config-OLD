@@ -1,7 +1,7 @@
 # Changelog
 
 ## 2.4.0 - 2022-01-25
-* Added `eslint-plugin-vue-a11y` plugin
+* Removed multi-word component name rule
 * Updated dependencies
 
 ## 2.3.0 - 2021-11-09
