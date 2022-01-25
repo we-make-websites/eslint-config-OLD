@@ -4,7 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/vue3-recommended'
+    'plugin:vue/vue3-recommended',
   ],
   globals: {
     geoip2: true,
@@ -41,12 +41,21 @@ module.exports = {
     'semi': ['error', 'never'],
     'unused-imports/no-unused-imports': 'error',
 		'unused-imports/no-unused-vars': ['warn', {
-      'vars': 'all',
-      'varsIgnorePattern': '^_',
-      'args': 'after-used',
-      'argsIgnorePattern': '^_'
+      vars: 'all',
+      varsIgnorePattern: '^_',
+      args: 'after-used',
+      argsIgnorePattern: '^_',
     }],
+    'vue/first-attribute-linebreak': ['error', {
+      singleline: 'ignore',
+      multiline: 'below',
+    }],
+    'vue/first-attribute-linebreak': 'error',
+    'vue/multi-word-component-names': 'off',
     'vue/no-multiple-template-root': 'off',
+    'vue/no-reserved-props': ['error', {
+      vueVersion: 3,
+    }],
     'vue/no-v-html': 'off',
   },
 }

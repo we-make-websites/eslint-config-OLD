@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.0 - 2022-01-25
+* Removed multi-word component name rule
+* Updated dependencies
+
 ## 2.3.0 - 2021-11-09
 * Added no undeclared variables rule
 
