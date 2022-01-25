@@ -4,7 +4,8 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/vue3-recommended'
+    'plugin:vue-a11y/base',
+    'plugin:vue/vue3-recommended',
   ],
   globals: {
     geoip2: true,
@@ -20,6 +21,7 @@ module.exports = {
   plugins: [
     '@babel',
     'unused-imports',
+    'vue-a11y',
   ],
   root: true,
   rules: {
