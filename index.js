@@ -37,6 +37,7 @@ module.exports = {
     'no-process-env': 'off',
     'no-undef': 'error',
     'no-unused-vars': 'off',
+    'no-var': 'error',
     'object-curly-spacing': ['error', 'always'],
     'semi': ['error', 'never'],
     'unused-imports/no-unused-imports': 'error',
@@ -46,6 +47,7 @@ module.exports = {
       args: 'after-used',
       argsIgnorePattern: '^_',
     }],
+    'prefer-const': 'error',
     'vue/first-attribute-linebreak': ['error', {
       singleline: 'ignore',
       multiline: 'below',
