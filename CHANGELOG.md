@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.0 - 2022-07-14
+
+* Updated dependencies
+
 ## 2.5.0 - 2022-04-05
 * Added no var rule
 * Added prefer const rule
