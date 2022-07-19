@@ -19,6 +19,7 @@ module.exports = {
   'computed-property-spacing': ['error', 'never'],
   'dot-location': ['error', 'property'],
   'eol-last': ['error', 'always'],
+  'func-call-spacing': ['error', 'never'],
   'lines-around-comment': ['error', {
     ignorePattern: 'webpack'
   }],

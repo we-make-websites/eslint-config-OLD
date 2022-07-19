@@ -5,6 +5,7 @@
 * Added `eslint:recommended` to extends
 * Added numerous new rules
 * Split rules into separate JS files according to eslint documentation
+* Removed deprecated rules
 
 ## 2.6.0 - 2022-07-14
 
