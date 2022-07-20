@@ -3,7 +3,7 @@
 ## 3.0.0 - 2022-07-??
 
 * Added `eslint:recommended` to extends
-* Added numerous new rules
+* Expanded ruleset to be feature complete
 * Split rules into separate JS files according to eslint documentation
 * Removed deprecated rules
 
