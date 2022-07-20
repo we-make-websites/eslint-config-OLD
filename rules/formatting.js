@@ -3,10 +3,7 @@ module.exports = {
     minItems: 2,
     multiline: true,
   }],
-  'array-bracket-spacing': ['error', 'always', {
-    arraysInArrays: false,
-    objectsInArrays: false,
-  }],
+  'array-bracket-spacing': ['error', 'never'],
   'array-element-newline': ['error', {
     minItems: 2,
     multiline: true,
@@ -71,7 +68,9 @@ module.exports = {
   'new-parens': ['error', 'always'],
   // Doesn't enforce newline per chained call, just those over limit
   'newline-per-chained-call': 'off',
-  'no-extra-parens': ['error', 'all'],
+  'no-extra-parens': ['error', 'all', {
+    nestedBinaryExpressions: false,
+  }],
   'no-multi-spaces': ['error', {
     exceptions: {
       Property: false,
@@ -106,9 +105,8 @@ module.exports = {
       '?': 'before',
     },
   }],
-  'padded-blocks': ['error', 'never', {
-    allowSingleLineBlocks: false,
-  }],
+  // Interferes with padding in if ... else and try ... catch
+  'padded-blocks': 'off',
   // Sets line rules between given statements, does not depend on multiline
   'padding-line-between-statements': 'off',
   'quotes': ['error', 'single', {
