@@ -27,9 +27,9 @@ module.exports = {
   root: true,
   rules: merge(
     // require('./rules/formatting'),
-    // require('./rules/import'),
     // require('./rules/problems'),
     // require('./rules/suggestions'),
+    // require('./rules/unused-imports'),
     require('./rules/vue'),
     {
       'array-bracket-newline': ['error', {
@@ -370,8 +370,6 @@ module.exports = {
       yoda: ['error', 'never'],
     },
     {
-      'import/no-anonymous-default-export': 'off',
-      'import/order': 'off',
       'unused-imports/no-unused-imports': 'warn',
       'unused-imports/no-unused-vars': ['warn', {
         args: 'after-used',
