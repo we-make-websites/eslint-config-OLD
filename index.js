@@ -31,16 +31,15 @@ module.exports = {
     // require('./rules/suggestions'),
     // require('./rules/unused-imports'),
     // require('./rules/vue'),
+
+    // Formatting
     {
       'array-bracket-newline': ['error', {
-        minItems: 2,
+        minItems: 3,
         multiline: true,
       }],
       'array-bracket-spacing': ['error', 'never'],
-      'array-element-newline': ['error', {
-        minItems: 2,
-        multiline: true,
-      }],
+      'array-element-newline': ['error', 'consistent'],
       'arrow-spacing': ['error', {
         after: true,
         before: true,
@@ -58,7 +57,7 @@ module.exports = {
       'eol-last': ['error', 'always'],
       'func-call-spacing': ['error', 'never'],
       'function-call-argument-newline': ['error', 'consistent'],
-      'function-paren-newline': ['error', 'multiline'],
+      'function-paren-newline': ['error', 'multiline-arguments'],
       'generator-star-spacing': ['error', {
         after: false,
         before: true,
@@ -119,12 +118,11 @@ module.exports = {
       'nonblock-statement-body-position': ['error', 'beside'],
       'object-curly-newline': ['error', {
         consistent: true,
-        minProperties: 3,
         multiline: true,
       }],
       'object-curly-spacing': ['error', 'always'],
       'object-property-newline': ['error', {
-        allowAllPropertiesOnSameLine: false,
+        allowAllPropertiesOnSameLine: true,
       }],
       'operator-linebreak': ['error', 'after', {
         overrides: {
@@ -171,8 +169,12 @@ module.exports = {
         before: false,
       }]
     },
+
+    // Problems
     {
       'array-callback-return': 'error',
+      // Frequently use async promises
+      'no-async-promise-executor': 'off',
       'no-await-in-loop': 'warn',
       'no-constant-binary-expression': 'error',
       'no-constructor-return': 'error',
@@ -192,6 +194,8 @@ module.exports = {
       // Don't fully understand this rule
       'require-atomic-updates': 'off',
     },
+
+    // Suggestions
     {
       'accessor-pairs': ['warn', {
         setWithoutGet: true,
@@ -201,9 +205,13 @@ module.exports = {
       'block-scoped-var': 'warn',
       'camelcase': ['error', {
         ignoreDestructuring: true,
-        properties: 'always',
+        ignoreGlobals: false,
+        ignoreImports: false,
+        properties: 'never',
       }],
-      'capitalized-comments': ['error', 'always'],
+      'capitalized-comments': ['error', 'always', {
+        ignorePattern: 'webpack',
+      }],
       'class-methods-use-this': 'off',
       // Can't determine appropriate level of complexity
       'complexity': 'off',
@@ -218,12 +226,14 @@ module.exports = {
       'dot-notation': 'error',
       'eqeqeq': ['error', 'always'],
       'func-name-matching': ['error', 'always'],
-      'func-names': ['error', 'always'],
-      'func-style': ['error', 'declaration'],
+      'func-names': ['error', 'as-needed'],
+      // Interferes with Storybook
+      'func-style': 'off',
       'grouped-accessor-pairs': 'warn',
       'guard-for-in': 'off',
       'id-denylist': 'off',
-      'id-length': ['warn', {
+      'id-length': ['error', {
+        exceptions: ['_', 'a', 'b'],
         min: 2,
         properties: 'never',
       }],
@@ -231,7 +241,7 @@ module.exports = {
       'init-declarations': 'off',
       'max-classes-per-file': 'off',
       'max-depth': ['error', {
-        max: 3,
+        max: 4,
       }],
       'max-lines': 'off',
       'max-lines-per-function': 'off',
@@ -366,6 +376,8 @@ module.exports = {
       'vars-on-top': 'off',
       yoda: ['error', 'never'],
     },
+
+    // Unused Imports
     {
       'unused-imports/no-unused-imports': 'warn',
       'unused-imports/no-unused-vars': ['warn', {
@@ -373,13 +385,21 @@ module.exports = {
         vars: 'all',
       }],
     },
+
+    // Vue
     {
       // v-html is useful
       'vue/no-v-html': 'off',
       'vue/block-lang': ['error', {
-        allowNoLang: true,
+        script: {
+          allowNoLang: true,
+        },
       }],
-      'vue/block-tag-newline': 'error',
+      'vue/block-tag-newline': ['error', {
+        maxEmptyLines: 1,
+        multiline: 'consistent',
+        singleline: 'consistent',
+      }],
       'vue/component-name-in-template-casing': ['error', 'kebab-case', {
         registeredComponentsOnly: true,
       }],
@@ -436,7 +456,8 @@ module.exports = {
       'vue/no-this-in-before-route-enter': 'error',
       // Cannot check globally registered components
       'vue/no-undef-components': 'off',
-      'vue/no-undef-properties': 'error',
+      // Doesn't work with Vuex
+      'vue/no-undef-properties': 'off',
       'vue/no-unsupported-features': ['error', {
         version: '^3.2.0',
       }],
@@ -446,6 +467,8 @@ module.exports = {
       'vue/no-useless-v-bind': 'error',
       // v-text is useful
       'vue/no-v-text': 'off',
+      // Useful with <component is>
+      'vue/no-v-text-v-html-on-component': 'off',
       'vue/padding-line-between-blocks': ['error', 'always'],
       'vue/prefer-prop-type-boolean-first': 'error',
       'vue/prefer-separate-static-class': 'error',
@@ -459,17 +482,12 @@ module.exports = {
         baseIndent: 0,
         switchCase: 1,
       }],
-      'vue/sort-keys': ['error', 'asc', {
-        caseSensitive: false,
-        ignoreChildrenOf: ['model'],
-        ignoreGrandchildrenOf: ['computed', 'directives', 'inject', 'props', 'watch'],
-        minKeys: 2,
-        natural: true,
-      }],
+      // Interferes with section schemas
+      'vue/sort-keys': 'off',
       // Classes can be in any order
       'vue/static-class-names-order': 'off',
       'vue/v-for-delimiter-style': ['error', 'of'],
-      'vue/v-on-function-call': ['error', 'always'],
+      'vue/v-on-function-call': ['error', 'never'],
     },
   ),
 }
