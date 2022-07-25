@@ -26,10 +26,150 @@ module.exports = {
   ],
   root: true,
   rules: merge(
-    require('./rules/formatting'),
+    // require('./rules/formatting'),
     require('./rules/problems'),
     // require('./rules/suggestions'),
     require('./rules/vue'),
+    {
+      'array-bracket-newline': ['error', {
+        minItems: 2,
+        multiline: true,
+      }],
+      'array-bracket-spacing': ['error', 'never'],
+      'array-element-newline': ['error', {
+        minItems: 2,
+        multiline: true,
+      }],
+      'arrow-spacing': ['error', {
+        after: true,
+        before: true,
+      }],
+      'block-spacing': ['error', 'always'],
+      'brace-style': ['error', '1tbs'],
+      'comma-dangle': ['error', 'always-multiline'],
+      'comma-spacing': ['error', {
+        after: true,
+        before: false,
+      }],
+      'comma-style': ['error', 'last'],
+      'computed-property-spacing': ['error', 'never'],
+      'dot-location': ['error', 'property'],
+      'eol-last': ['error', 'always'],
+      'func-call-spacing': ['error', 'never'],
+      'function-call-argument-newline': ['error', 'consistent'],
+      'function-paren-newline': ['error', 'multiline'],
+      'generator-star-spacing': ['error', {
+        after: false,
+        before: true,
+      }],
+      'implicit-arrow-linebreak': ['error', 'beside'],
+      'indent': ['error', 2, {
+        SwitchCase: 1,
+      }],
+      'jsx-quotes': ['error', 'prefer-double'],
+      'key-spacing': ['error', {
+        afterColon: true,
+        beforeColon: false,
+        mode: 'strict',
+      }],
+      'keyword-spacing': ['error', {
+        before: true,
+        after: true,
+      }],
+      'line-comment-position': ['error', {
+        position: 'above',
+      }],
+      'linebreak-style': ['error', 'unix'],
+      'lines-around-comment': ['error', {
+        beforeBlockComment: true,
+        ignorePattern: 'webpack'
+      }],
+      'lines-between-class-members': ['error', 'always'],
+      // Too inflexible
+      'max-len': 'off',
+      'max-statements-per-line': ['error', {
+        max: 1,
+      }],
+      'multiline-ternary': ['error', 'always-multiline'],
+      'new-parens': ['error', 'always'],
+      // Doesn't enforce newline per chained call, just those over limit
+      'newline-per-chained-call': 'off',
+      'no-extra-parens': ['error', 'all', {
+        nestedBinaryExpressions: false,
+      }],
+      'no-multi-spaces': ['error', {
+        exceptions: {
+          Property: false,
+        },
+      }],
+      'no-multiple-empty-lines': ['error', {
+        max: 1,
+        maxBOF: 0,
+        maxEOF: 0,
+      }],
+      'no-tabs': ['error', {
+        allowIndentationTabs: false,
+      }],
+      'no-trailing-spaces': ['error', {
+        ignoreComments: false,
+        skipBlankLines: false,
+      }],
+      'no-whitespace-before-property': 'error',
+      'nonblock-statement-body-position': ['error', 'beside'],
+      'object-curly-newline': ['error', {
+        consistent: true,
+        minProperties: 3,
+        multiline: true,
+      }],
+      'object-curly-spacing': ['error', 'always'],
+      'object-property-newline': ['error', {
+        allowAllPropertiesOnSameLine: false,
+      }],
+      'operator-linebreak': ['error', 'after', {
+        overrides: {
+          ':': 'before',
+          '?': 'before',
+        },
+      }],
+      // Interferes with padding in if ... else and try ... catch
+      'padded-blocks': 'off',
+      // Sets line rules between given statements, does not depend on multiline
+      'padding-line-between-statements': 'off',
+      'quotes': ['error', 'single', {
+        allowTemplateLiterals: true,
+      }],
+      'rest-spread-spacing': ['error', 'never'],
+      'semi': ['error', 'never'],
+      'semi-spacing': ['error', {
+        after: false,
+        before: false,
+      }],
+      'semi-style': 'off',
+      'space-before-blocks': ['error', 'always'],
+      'space-before-function-paren': ['error', 'never'],
+      'space-in-parens': ['error', 'never'],
+      'space-infix-ops': ['error', {
+        int32Hint: false,
+      }],
+      'space-unary-ops': ['error', {
+        nonwords: false,
+        words: true,
+      }],
+      'switch-colon-spacing': ['error', {
+        after: true,
+        before: false,
+      }],
+      'template-curly-spacing': ['error', 'never'],
+      'template-tag-spacing': ['error', 'always'],
+      'unicode-bom': ['error', 'never'],
+      // Unsure of significance
+      'wrap-iife': 'off',
+      'wrap-regex': 'error',
+      'yield-star-spacing': ['error', {
+        after: true,
+        before: false,
+      }]
+    },
     {
       'accessor-pairs': ['warn', {
         setWithoutGet: true,
@@ -126,7 +266,86 @@ module.exports = {
       'no-param-reassign': 'error',
       'no-plusplus': 'off',
       'no-proto': 'error',
+      'no-restricted-exports': 'off',
+      'no-restricted-globals': 'off',
+      'no-restricted-imports': ['warn', {
+        paths: [
+          {
+            name: 'axios',
+            message: 'Use fetch instead',
+          },
+          {
+            name: 'moment',
+            message: 'Moment is deprecated, we recommend Intl.DateTimeFormat or date-fns',
+          },
+        ],
+      }],
+      'no-restricted-properties': 'off',
+      'no-restricted-syntax': 'off',
+      'no-return-assign': 'error',
+      'no-return-await': 'error',
+      'no-script-url': 'error',
+      'no-sequences': 'error',
+      'no-shadow': 'error',
+      'no-ternary': 'off',
+      'no-throw-literal': 'error',
+      'no-undef-init': 'error',
+      'no-undefined': 'error',
+      'no-underscore-dangle': 'error',
+      'no-unneeded-ternary': 'error',
+      'no-unused-expressions': 'error',
+      'no-useless-call': 'error',
+      'no-useless-computed-key': 'error',
+      'no-useless-concat': 'error',
+      'no-useless-constructor': 'error',
+      'no-useless-rename': 'error',
+      'no-useless-return': 'error',
+      'no-var': 'error',
+      'no-void': 'error',
+      'no-warning-comments': 'warn',
+      'object-shorthand': 'error',
+      'one-var': 'off',
+      'one-var-declaration-per-line': ['error', 'always'],
+      'operator-assignment': ['error', 'always'],
+      'prefer-arrow-callback': 'error',
       'prefer-const': 'warn',
+      // To complicated to handle all scenarios
+      'prefer-destructuring': 'off',
+      'prefer-exponentiation-operator': 'error',
+      'prefer-named-capture-group': 'warn',
+      'prefer-numeric-literals': 'error',
+      'prefer-object-has-own': 'error',
+      'prefer-object-spread': 'error',
+      'prefer-promise-reject-errors': 'error',
+      // Use a mix for readability
+      'prefer-regex-literals': 'off',
+      'prefer-rest-params': 'error',
+      'prefer-spread': 'error',
+      'prefer-template': 'error',
+      'quote-props': ['error', 'as-needed'],
+      'radix': ['error', 'as-needed'],
+      'require-await': 'error',
+      'require-unicode-regexp': 'error',
+      'sort-imports': ['error', {
+        allowSeparatedGroups: true,
+        ignoreCase: true,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+      }],
+      'sort-keys': ['error', 'asc', {
+        caseSensitive: false,
+        minKeys: 3,
+        natural: true,
+      }],
+      'sort-vars': 'error',
+      'spaced-comment': ['error', 'always'],
+      // Needed for Basis plugins
+      'strict': 'off',
+      'symbol-description': 'error',
+      // Prefer vars to be defined where needed
+      'vars-on-top': 'off',
+      yoda: ['error', 'never'],
     },
     {
       'import/no-anonymous-default-export': 'off',
@@ -134,9 +353,7 @@ module.exports = {
       'unused-imports/no-unused-imports': 'warn',
       'unused-imports/no-unused-vars': ['warn', {
         args: 'after-used',
-        argsIgnorePattern: '^_',
         vars: 'all',
-        varsIgnorePattern: '^_',
       }],
     },
   ),
