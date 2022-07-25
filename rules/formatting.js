@@ -53,14 +53,8 @@ module.exports = {
     ignorePattern: 'webpack'
   }],
   'lines-between-class-members': ['error', 'always'],
-  'max-len': ['error', {
-    code: 80,
-    ignoreRegExpLiterals: true,
-    ignoreStrings: true,
-    ignoreTemplateLiterals: true,
-    ignoreUrls: true,
-    tabWidth: 2,
-  }],
+  // Too inflexible
+  'max-len': 'off',
   'max-statements-per-line': ['error', {
     max: 1,
   }],
@@ -92,7 +86,7 @@ module.exports = {
   'nonblock-statement-body-position': ['error', 'beside'],
   'object-curly-newline': ['error', {
     consistent: true,
-    minProperties: 2,
+    minProperties: 3,
     multiline: true,
   }],
   'object-curly-spacing': ['error', 'always'],
