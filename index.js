@@ -27,6 +27,7 @@ module.exports = {
   root: true,
   rules: merge(
     // require('./rules/formatting'),
+    // require('./rules/import'),
     require('./rules/problems'),
     // require('./rules/suggestions'),
     require('./rules/vue'),
