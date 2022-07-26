@@ -159,7 +159,8 @@ module.exports = {
   'quote-props': ['error', 'as-needed'],
   'radix': ['error', 'as-needed'],
   'require-await': 'error',
-  'require-unicode-regexp': 'error',
+  // Changes meaning of regex
+  'require-unicode-regexp': 'off',
   'sort-imports': ['error', {
     allowSeparatedGroups: true,
     ignoreCase: true,
