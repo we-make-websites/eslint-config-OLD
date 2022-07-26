@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 - 2022-07-??
+## 3.0.0 - 2022-07-26
 
 * Added `eslint:recommended` to extends
 * Expanded ruleset to be feature complete

@@ -2,15 +2,22 @@ module.exports = {
   // v-html is useful
   'vue/no-v-html': 'off',
   'vue/block-lang': ['error', {
-    allowNoLang: true,
+    script: {
+      allowNoLang: true,
+    },
   }],
-  'vue/block-tag-newline': 'error',
+  'vue/block-tag-newline': ['error', {
+    maxEmptyLines: 1,
+    multiline: 'consistent',
+    singleline: 'consistent',
+  }],
   'vue/component-name-in-template-casing': ['error', 'kebab-case', {
     registeredComponentsOnly: true,
   }],
   'vue/component-options-name-casing': ['error', 'PascalCase'],
   'vue/custom-event-name-casing': ['error', 'kebab-case'],
-  'vue/define-macros-order': 'error',
+  // Caused issues in Basis?
+  'vue/define-macros-order': 'off',
   'vue/html-button-has-type': 'error',
   'vue/html-comment-content-newline': ['error', {
     multiline: 'always',
@@ -61,7 +68,8 @@ module.exports = {
   'vue/no-this-in-before-route-enter': 'error',
   // Cannot check globally registered components
   'vue/no-undef-components': 'off',
-  'vue/no-undef-properties': 'error',
+  // Doesn't work with Vuex
+  'vue/no-undef-properties': 'off',
   'vue/no-unsupported-features': ['error', {
     version: '^3.2.0',
   }],
@@ -71,6 +79,8 @@ module.exports = {
   'vue/no-useless-v-bind': 'error',
   // v-text is useful
   'vue/no-v-text': 'off',
+  // Useful with <component is>
+  'vue/no-v-text-v-html-on-component': 'off',
   'vue/padding-line-between-blocks': ['error', 'always'],
   'vue/prefer-prop-type-boolean-first': 'error',
   'vue/prefer-separate-static-class': 'error',
@@ -84,15 +94,10 @@ module.exports = {
     baseIndent: 0,
     switchCase: 1,
   }],
-  'vue/sort-keys': ['error', 'asc', {
-    caseSensitive: false,
-    ignoreChildrenOf: ['model'],
-    ignoreGrandchildrenOf: ['computed', 'directives', 'inject', 'props', 'watch'],
-    minKeys: 2,
-    natural: true,
-  }],
+  // Interferes with section schemas
+  'vue/sort-keys': 'off',
   // Classes can be in any order
   'vue/static-class-names-order': 'off',
   'vue/v-for-delimiter-style': ['error', 'of'],
-  'vue/v-on-function-call': ['error', 'always'],
+  'vue/v-on-function-call': ['error', 'never'],
 }

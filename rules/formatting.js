@@ -1,13 +1,10 @@
 module.exports = {
   'array-bracket-newline': ['error', {
-    minItems: 2,
+    minItems: 3,
     multiline: true,
   }],
   'array-bracket-spacing': ['error', 'never'],
-  'array-element-newline': ['error', {
-    minItems: 2,
-    multiline: true,
-  }],
+  'array-element-newline': ['error', 'consistent'],
   'arrow-spacing': ['error', {
     after: true,
     before: true,
@@ -25,7 +22,7 @@ module.exports = {
   'eol-last': ['error', 'always'],
   'func-call-spacing': ['error', 'never'],
   'function-call-argument-newline': ['error', 'consistent'],
-  'function-paren-newline': ['error', 'multiline'],
+  'function-paren-newline': ['error', 'multiline-arguments'],
   'generator-star-spacing': ['error', {
     after: false,
     before: true,
@@ -86,12 +83,11 @@ module.exports = {
   'nonblock-statement-body-position': ['error', 'beside'],
   'object-curly-newline': ['error', {
     consistent: true,
-    minProperties: 3,
     multiline: true,
   }],
   'object-curly-spacing': ['error', 'always'],
   'object-property-newline': ['error', {
-    allowAllPropertiesOnSameLine: false,
+    allowAllPropertiesOnSameLine: true,
   }],
   'operator-linebreak': ['error', 'after', {
     overrides: {
@@ -109,7 +105,7 @@ module.exports = {
   'rest-spread-spacing': ['error', 'never'],
   'semi': ['error', 'never'],
   'semi-spacing': ['error', {
-    after: false,
+    after: true,
     before: false,
   }],
   'semi-style': 'off',

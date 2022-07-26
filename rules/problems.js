@@ -1,5 +1,7 @@
 module.exports = {
   'array-callback-return': 'error',
+  // Frequently use async promises
+  'no-async-promise-executor': 'off',
   'no-await-in-loop': 'warn',
   'no-constant-binary-expression': 'error',
   'no-constructor-return': 'error',

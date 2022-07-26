@@ -7,9 +7,13 @@ module.exports = {
   'block-scoped-var': 'warn',
   'camelcase': ['error', {
     ignoreDestructuring: true,
-    properties: 'always',
+    ignoreGlobals: false,
+    ignoreImports: false,
+    properties: 'never',
   }],
-  'capitalized-comments': ['error', 'always'],
+  'capitalized-comments': ['error', 'always', {
+    ignorePattern: 'webpack',
+  }],
   'class-methods-use-this': 'off',
   // Can't determine appropriate level of complexity
   'complexity': 'off',
@@ -24,12 +28,14 @@ module.exports = {
   'dot-notation': 'error',
   'eqeqeq': ['error', 'always'],
   'func-name-matching': ['error', 'always'],
-  'func-names': ['error', 'always'],
-  'func-style': ['error', 'declaration'],
+  'func-names': ['error', 'as-needed'],
+  // Interferes with Storybook
+  'func-style': 'off',
   'grouped-accessor-pairs': 'warn',
   'guard-for-in': 'off',
   'id-denylist': 'off',
-  'id-length': ['warn', {
+  'id-length': ['error', {
+    exceptions: ['_', 'a', 'b'],
     min: 2,
     properties: 'never',
   }],
@@ -37,7 +43,7 @@ module.exports = {
   'init-declarations': 'off',
   'max-classes-per-file': 'off',
   'max-depth': ['error', {
-    max: 3,
+    max: 5,
   }],
   'max-lines': 'off',
   'max-lines-per-function': 'off',
@@ -161,11 +167,8 @@ module.exports = {
     ignoreMemberSort: false,
     memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
   }],
-  'sort-keys': ['error', 'asc', {
-    caseSensitive: false,
-    minKeys: 3,
-    natural: true,
-  }],
+  // Interferes with Vue files
+  'sort-keys': 'off',
   'sort-vars': 'error',
   'spaced-comment': ['error', 'always'],
   // Needed for Basis plugins
