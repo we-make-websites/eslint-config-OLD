@@ -140,7 +140,7 @@ module.exports = {
       'rest-spread-spacing': ['error', 'never'],
       'semi': ['error', 'never'],
       'semi-spacing': ['error', {
-        after: false,
+        after: true,
         before: false,
       }],
       'semi-style': 'off',
@@ -241,7 +241,7 @@ module.exports = {
       'init-declarations': 'off',
       'max-classes-per-file': 'off',
       'max-depth': ['error', {
-        max: 4,
+        max: 5,
       }],
       'max-lines': 'off',
       'max-lines-per-function': 'off',
@@ -405,7 +405,8 @@ module.exports = {
       }],
       'vue/component-options-name-casing': ['error', 'PascalCase'],
       'vue/custom-event-name-casing': ['error', 'kebab-case'],
-      'vue/define-macros-order': 'error',
+      // Caused issues in Basis?
+      'vue/define-macros-order': 'off',
       'vue/html-button-has-type': 'error',
       'vue/html-comment-content-newline': ['error', {
         multiline: 'always',
