@@ -3,9 +3,7 @@ module.exports = {
     multiline: true,
   }],
   'array-bracket-spacing': ['error', 'never'],
-  'array-element-newline': ['error', {
-    minItems: 3,
-  }],
+  'array-element-newline': ['error', 'consistent'],
   'arrow-spacing': ['error', {
     after: true,
     before: true,
@@ -83,7 +81,7 @@ module.exports = {
   'no-whitespace-before-property': 'error',
   'nonblock-statement-body-position': ['error', 'beside'],
   'object-curly-newline': ['error', {
-    consistent: false,
+    consistent: true,
     multiline: true,
   }],
   'object-curly-spacing': ['error', 'always'],
