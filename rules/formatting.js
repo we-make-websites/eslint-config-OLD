@@ -1,10 +1,11 @@
 module.exports = {
   'array-bracket-newline': ['error', {
-    minItems: 3,
     multiline: true,
   }],
   'array-bracket-spacing': ['error', 'never'],
-  'array-element-newline': ['error', 'consistent'],
+  'array-element-newline': ['error', {
+    minItems: 3,
+  }],
   'arrow-spacing': ['error', {
     after: true,
     before: true,
@@ -82,7 +83,7 @@ module.exports = {
   'no-whitespace-before-property': 'error',
   'nonblock-statement-body-position': ['error', 'beside'],
   'object-curly-newline': ['error', {
-    consistent: true,
+    consistent: false,
     multiline: true,
   }],
   'object-curly-spacing': ['error', 'always'],

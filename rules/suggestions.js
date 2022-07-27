@@ -11,9 +11,8 @@ module.exports = {
     ignoreImports: false,
     properties: 'never',
   }],
-  'capitalized-comments': ['error', 'always', {
-    ignorePattern: 'webpack',
-  }],
+  // Interferes with commenting out code
+  'capitalized-comments': 'off',
   'class-methods-use-this': 'off',
   // Can't determine appropriate level of complexity
   'complexity': 'off',
@@ -52,7 +51,8 @@ module.exports = {
     max: 4,
   }],
   'max-statements': 'off',
-  'multiline-comment-style': ['error', 'starred-block'],
+  // To format starred-blocks you prevent people using multiple inline comments
+  'multiline-comment-style': 'off',
   'new-cap': ['error', {
     capIsNew: false,
     newIsCap: true,
