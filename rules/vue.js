@@ -48,10 +48,6 @@ module.exports = {
   'vue/no-restricted-custom-event': 'off',
   'vue/no-restricted-html-elements': ['warn',
     {
-      element: 'button',
-      message: 'Use <btn> component',
-    },
-    {
       element: 'img',
       message: 'Use <art-direction> or <responsive-image> components',
     },
