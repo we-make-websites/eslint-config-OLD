@@ -49,8 +49,17 @@ module.exports = {
     ignorePattern: 'webpack'
   }],
   'lines-between-class-members': ['error', 'always'],
-  // Too inflexible
-  'max-len': 'off',
+  'max-len': ['error' , {
+    code: 100,
+    comments: 80,
+    ignoreComments: false,
+    ignoreRegExpLiterals: true,
+    ignoreStrings: true,
+    ignoreTemplateLiterals: true,
+    ignoreTrailingComments: false,
+    ignoreUrls: true,
+    tabWidth: 2,
+  }],
   'max-statements-per-line': ['error', {
     max: 1,
   }],
