@@ -1,6 +1,6 @@
 {
   "name": "@we-make-websites/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.0-module",
   "description": "We Make Website's eslint rules and config",
   "repository": "https://github.com/we-make-websites/eslint-config",
   "author": "Craig Baldwin <craig@wemakewebsites.com>",
@@ -10,8 +10,6 @@
     "eslint": "8.20.0"
   },
   "dependencies": {
-    "@babel/eslint-parser": "7.18.9",
-    "@babel/eslint-plugin": "7.17.7",
     "eslint-plugin-unused-imports": "2.0.0",
     "eslint-plugin-vue": "9.2.0",
     "merge": "2.1.1"

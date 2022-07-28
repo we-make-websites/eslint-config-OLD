@@ -16,12 +16,7 @@ module.exports = {
     Shopify: true,
     URLSearchParams: true,
   },
-  parserOptions: {
-    parser: '@babel/eslint-parser',
-    requireConfigFile: false,
-  },
   plugins: [
-    '@babel',
     'unused-imports',
   ],
   root: true,
