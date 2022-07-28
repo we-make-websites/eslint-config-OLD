@@ -53,6 +53,7 @@ module.exports = {
     code: 100,
     comments: 80,
     ignoreComments: false,
+    ignorePattern: '^(?:\\/\\*|\\/\\/) eslint-disable.+?(?:\\*\\/)?$',
     ignoreRegExpLiterals: true,
     ignoreStrings: true,
     ignoreTemplateLiterals: true,
