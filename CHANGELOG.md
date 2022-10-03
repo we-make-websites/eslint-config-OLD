@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.0 - 2022-10-03
+
+* Updated dependencies
+
 ## 3.0.0 - 2022-07-28
 
 * Added `eslint:recommended` to extends
