@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.0 - 2022-10-03
+
+* Updated dependencies
+
 ## 3.0.0 - 2022-07-28
 
 * Added `eslint:recommended` to extends
@@ -12,11 +16,13 @@
 * Updated dependencies
 
 ## 2.5.0 - 2022-04-05
+
 * Added no var rule
 * Added prefer const rule
 * Updated dependencies
 
 ## 2.4.0 - 2022-01-25
+
 * Removed multi-word component name rule
 * Updated dependencies
 
