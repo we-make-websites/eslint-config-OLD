@@ -22,14 +22,12 @@ module.exports = {
   },
   plugins: [
     '@babel',
-    'unused-imports',
   ],
   root: true,
   rules: merge(
     require('./rules/formatting'),
     require('./rules/problems'),
     require('./rules/suggestions'),
-    require('./rules/unused-imports'),
     require('./rules/vue'),
   ),
 }
