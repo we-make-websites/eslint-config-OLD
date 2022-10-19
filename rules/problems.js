@@ -11,6 +11,7 @@ module.exports = {
   'no-template-curly-in-string': 'error',
   'no-unmodified-loop-condition': 'error',
   'no-unreachable-loop': 'error',
+  'no-unused-vars': 'error',
   'no-unused-private-class-members': 'error',
   'no-use-before-define': ['error', {
     allowNamedExports: false,

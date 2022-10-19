@@ -16,15 +16,12 @@ module.exports = {
     Shopify: true,
     URLSearchParams: true,
   },
-  plugins: [
-    'unused-imports',
-  ],
+  plugins: [],
   root: true,
   rules: merge(
     require('./rules/formatting'),
     require('./rules/problems'),
     require('./rules/suggestions'),
-    require('./rules/unused-imports'),
     require('./rules/vue'),
   ),
 }
