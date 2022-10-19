@@ -142,8 +142,10 @@ module.exports = {
   'one-var-declaration-per-line': ['error', 'always'],
   'operator-assignment': ['error', 'always'],
   'prefer-arrow-callback': 'error',
-  'prefer-const': 'warn',
-  // To complicated to handle all scenarios
+  'prefer-const': ['error', {
+    destructuring: 'all',
+  }],
+  // Too complicated to handle all scenarios
   'prefer-destructuring': 'off',
   'prefer-exponentiation-operator': 'error',
   'prefer-named-capture-group': 'warn',

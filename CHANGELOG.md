@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.2.0 - 2022-10-19
+
+* Removed `unused-imports` extension as it's natively supported
+* Updated dependencies
+
 ## 3.1.0 - 2022-10-03
 
 * Updated dependencies
